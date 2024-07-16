@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volume Tangki Kimia</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Volume Tangki Kimia</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#perhitungan">Perhitungan</a></li>
+                <li><a href="#informasi">Informasi</a></li>
+                <li><a href="#kontak">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h2>Selamat Datang di Volume Tangki Kimia</h2>
+        <p>Website ini membantu Anda menghitung volume tangki untuk berbagai jenis bahan kimia.</p>
+    </section>
+
+    <section id="perhitungan">
+        <h2>Perhitungan Volume Tangki</h2>
+        <form id="formPerhitungan">
+            <label for="jenisTangki">Jenis Tangki:</label>
+            <select id="jenisTangki">
+                <option value="Silinder">Silinder</option>
+                <option value="Persegi Panjang">Persegi Panjang</option>
+            </select><br><br>
+
+            <div id="inputSilinder" class="inputGroup">
+                <label for="diameter">Diameter (m):</label>
+                <input type="number" id="diameter" step="0.01"><br><br>
+                <label for="tinggi">Tinggi (m):</label>
+                <input type="number" id="tinggi" step="0.01"><br><br>
+            </div>
+
+            <div id="inputPersegiPanjang" class="inputGroup" style="display: none;">
+                <label for="panjang">Panjang (m):</label>
+                <input type="number" id="panjang" step="0.01"><br><br>
+                <label for="lebar">Lebar (m):</label>
+                <input type="number" id="lebar" step="0.01"><br><br>
+                <label for="tinggiPersegi">Tinggi (m):</label>
+                <input type="number" id="tinggiPersegi" step="0.01"><br><br>
+            </div>
+
+            <button type="button" onclick="hitungVolume()">Hitung Volume</button>
+        </form>
+        <p id="hasilVolume"></p>
+    </section>
+
+    <section id="informasi">
+        <h2>Informasi</h2>
+        <p>Berbagai jenis tangki dan bahan kimia.</p>
+        <!-- Tambahkan informasi lebih lanjut di sini -->
+    </section>
+
+    <section id="kontak">
+        <h2>Kontak</h2>
+        <form>
+            <label for="nama">Nama:</label>
+            <input type="text" id="nama"><br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email"><br><br>
+            <label for="pesan">Pesan:</label>
+            <textarea id="pesan"></textarea><br><br>
+            <button type="submit">Kirim</button>
+        </form>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
